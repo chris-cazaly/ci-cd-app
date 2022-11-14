@@ -92,7 +92,7 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: jallumkones/places-app
+          image: ccazaly95/ci-cd-app
           tags: latest, ${{ needs.get_commit_sha.outputs.sha_output }}-SNAPSHOT, ${{ needs.bump_version.outputs.new_tag }}-SNAPSHOT
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
