@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "@babel/present-ev",
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
+}

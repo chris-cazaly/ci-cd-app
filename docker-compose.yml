@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  ci-cd-app:
+    container-name: ci-cd
+    image: ccazaly95/ci-cd-app:latest
+    ports:
+      - "5000:80"
+# --------------------------------------------------------------------------------------------------------|
+# docker build . -t ci-cd-app:v2
+#  ^ running this command in the terminal
+#    will create a docker image locally
+
+#  to look for images, run:
+#  docker images ls
+
+# to run the new image
+# -p refers to 'port mapping', syntax <local_port_number> : <docker_port_number>
+# -d refers to 'run in detatched mode', which means the logs will not be displayed in the terminal as the process runs
+# docker run -p 5000:80 -d ci-cd-app:v2
+
+# docker-compose up -d
+
+# docker-compose down
