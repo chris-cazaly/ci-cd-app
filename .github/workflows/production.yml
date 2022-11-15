@@ -95,9 +95,6 @@ jobs:
         run: npm ci
       - name: build
         run: npm run build --if-present
-      - name: Inject version
-        run: |
-          echo "window['appConfig'] = {\"version\": \"${{ needs.bump_version.outputs.new_tag }}\"}" > build/app-config.js
       - name: Deploy app
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
