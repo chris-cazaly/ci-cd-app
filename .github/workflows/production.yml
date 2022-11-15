@@ -70,7 +70,7 @@ jobs:
 
   push_to_docker:
     name: Push image to docker
-    needs: [bump_version, get_commit_sha]
+    needs: [bump_version]
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
