@@ -4,7 +4,7 @@ import Posts from "./components/posts/Posts";
 function App() {
   return (
     <div className="container">
-      <h1>Places app</h1>
+      <h1>Hello Places App</h1>
       <Posts />
     </div>
   );
